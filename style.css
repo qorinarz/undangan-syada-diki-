@@ -1,29 +1,85 @@
 body {
   margin: 0;
-  font-family: "Georgia", serif;
-  color: white;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
-  background: url("bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: #fdf6f0;
+  color: #5a4634;
 }
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
+
+/* Hero Background */
+.hero {
+  padding: 60px 20px;
+  background: url('bg.jpg') no-repeat center/cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-main {
-  padding: 80px 20px;
+
+/* Button */
+button {
+  padding: 12px 28px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  background: #c19a6b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0;
+
+button:hover {
+  background: #a77a4f;
 }
-h2 {
-  font-size: 2rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
+
+/* Animasi */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s;
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideDown 2s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 2s forwards 0.5s;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Sections */
+.acara, .penutup {
+  padding: 40px 20px;
 }

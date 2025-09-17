@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Undangan Syada & Diki siap ditampilkan!");
-  alert("Selamat datang di Undangan Syada & Diki ✨");
-});
+function playMusic() {
+  const music = document.getElementById("bg-music");
+  music.play();
+}
